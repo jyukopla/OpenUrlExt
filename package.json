@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PaoloMessina/OpenUrlExt.git"
+    "url": "git+https://github.com/jyukopla/OpenUrlExt.git"
   },
   "keywords": [
     "cordova",
@@ -19,7 +19,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PaoloMessina/OpenUrlExt/issues"
+    "url": "https://github.com/jyukopla/OpenUrlExt/issues"
   },
-  "homepage": "https://github.com/PaoloMessina/OpenUrlExt#readme"
+  "homepage": "https://github.com/jyukopla/OpenUrlExt#readme"
 }

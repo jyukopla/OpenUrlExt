@@ -2,7 +2,7 @@
 //  Paolo Messina
 //
 //  Created by Paolo Messina on 06/07/15.
-//
+//  Stripped to only cover iOS by Asko Soukka on 04/02/19.
 //
 
 var argscheck = require('cordova/argscheck'),
@@ -11,27 +11,9 @@ var argscheck = require('cordova/argscheck'),
 function OpenUrlExt () {};
 
 OpenUrlExt.prototype = {
-
-    open: function (url, success, failure, params)
-    {
-    	var urlHashed;
-    	if(params && params.encode == false)
-    		urlHashed = url;
-    	else 
-    		urlHashed = encodeURI(url);
-    	var agent = navigator.userAgent.toLowerCase();
-        //need to exclude windows due to IE/EDGE userAgent spoofing
-    	var isAndroid = /android/.test(agent) && !/windows/.test(agent)
-    	if(isAndroid){
-    		if(navigator && navigator.app)
-    			navigator.app.loadUrl(urlHashed, {openExternal : true});
-    		else {
-    			window.open(urlHashed, '_system');
-    		}
-    	} else {
-    		exec(success, failure, 'OpenUrlExt', 'open', [url]);
-    	}
-    }
+  open: function (url, success, failure, params) {
+    exec(success, failure, 'OpenUrlExt', 'open', [url]);
+  }
 };
 
 module.exports = new OpenUrlExt();
